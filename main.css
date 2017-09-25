@@ -76,7 +76,7 @@ body{
 
 .astronaut{
     display:none;
-    position:absolute;
+    position:relative;
     margin:0 auto;
     width:auto;
     height:45vh;

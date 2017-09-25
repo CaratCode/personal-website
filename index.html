@@ -1,0 +1,427 @@
+<!doctype html>
+<html>
+<head>
+    <title> Lawrence Lee </title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="main.css" type='text/css'>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<div class="preload-backgrounds">
+    <img src='resources/background2.png'>
+    <img src='resources/background3.png'>
+    <img src='resources/background4.png'>
+    <img src='resources/background5.png'>
+    <img src='resources/bruinnav.png'>
+    <img src='resources/bugs.png'>
+    <img id='rocket-img' src='resources/rocket.png'>
+</div>
+
+<div class='home container'>
+<div class='header'>Lawrence Lee</div>
+<div class='description'> Welcome, I'm a Computer Science student at UCLA. Check out what I'm about.</div>
+<div class='row'>
+    <div class='column col-xs-12 col-sm-5 col-md-6'>
+        <ul class='menu'>
+        <li class='menu-option start' value='intro'>START</li>
+        <li class='menu-option' value='intro'>SKILLS</li>
+        <li class='menu-option' value='projects'>PROJECTS</li>
+        <li class='menu-option' value='coursework'>COURSEWORK</li>
+        <li class='menu-option' value='contact'>CONTACT</li>    
+        </ul>
+    </div>
+    <div class='column col-xs-12 col-sm-7 col-md-6'>
+        <img class='astronaut' src='resources/astronaut_me.png'>
+    </div>
+</div>
+</div>
+
+<div class='header-menu'>
+    <img id='menu-open' class='mobile' src='resources/menu-open.png'/>
+    <ul class='score'>Score: 0</ul>
+    <span class='mobile-page-title mobile'></span>
+    <ul class='header-menu-mobile mobile'>
+        <li id='' class='mobile-menu-option start' value='intro'><img src='resources/nothing.png'/><a href='#intro-link'>START</a></li>
+        <li class='mobile-menu-option' value='intro'><img src='resources/nothing.png'/><a href='#intro-link'>SKILLS</a></li>
+        <li  class='mobile-menu-option' value='projects'><img src='resources/nothing.png'/><a href='#projects-link'>PROJECTS</a></li>
+        <li  class='mobile-menu-option' value='coursework'><img src='resources/nothing.png'/><a href='#coursework-link'>COURSEWORK</a></li>
+        <li  class='mobile-menu-option' value='contact'><img src='resources/nothing.png'/><a href='#contact-link'>CONTACT</a></li>
+    </ul>
+    <ul class='header-menu-wide'>
+        <li id='' class='menu-option progress-option start' value='intro'><img src='resources/nothing.png'/>START</li>
+        <li id='skills' class='menu-option progress-option' value='intro'><img src='resources/nothing.png'/>SKILLS</li>
+        <li id='projects' class='menu-option progress-option' value='projects'><img src='resources/nothing.png'/>PROJECTS</li>
+        <li id='coursework' class='menu-option progress-option' value='coursework'><img src='resources/nothing.png'/>COURSEWORK</li>
+        <li id='contact' class='menu-option progress-option' value='contact'><img src='resources/nothing.png'/>CONTACT</li>
+    </ul>
+</div>
+<div class='intro container'>
+<a name='intro-link'></a>
+<div class="intro-header section-header">
+    Welcome to my universe! First, check out my stats.
+</div>
+<canvas id='rocket' width='100' height='100'></canvas>
+<div class='starPath starPath1'>
+    <img class='star' src='resources/star.png'>
+    <img class='star' src='resources/star.png'>
+    <img class='star' src='resources/star.png'>
+    <img class='star' src='resources/star.png'>
+    <img class='star' src='resources/star.png'>
+    <img class='star' src='resources/star.png'>
+    <img class='star' src='resources/star.png'>
+    <img class='star' src='resources/star.png'>
+</div>
+<div class="filler">
+</div>
+<button id='openStats'>Open Stats</button>
+<div class='row'>
+    <div class='col-xs-12 col-md-6'>
+    <table class='table stats'>
+        <tr>
+            <td class='firstTD'><img src='resources/me_pixels.jpg'></td>
+            <td class='firstTD'> <div class='name'>Lawrence Lee</div></td>
+        </tr>
+        <tr>
+            <td>Education:</td>
+            <td>UCLA 2016-2020</td>
+        </tr>
+        <tr>
+            <td>Year:</td>
+            <td>2nd</td>
+        </tr>
+        <tr>
+                    <td>Skills:</td>
+            <td><ul>
+                <li class='stats-skills-category stats-skills-category-languages'>Languages</li>
+                <li class='stats-skills-category'>Frameworks</li>
+                <li class='stats-skills-category'>Software</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <div class='col-xs-12 col-md-6'>
+    <ul class='skills'>
+        <div class='skills-category-label'>Languages</div>
+    <div class='Languages skills-category'>
+        <li>
+            <div>C++</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+        <li>
+            <div>Python</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+        <li>
+            <div>HTML</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+        <li>
+            <div>Javascript</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+        <li>
+            <div>CSS</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+        <li>
+            <div>PostgreSQL</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+        </div>
+    <div class='Frameworks skills-category'>
+        <li>
+            <div>jQuery</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+        <li>
+            <div>Bootstrap</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+        <li>
+            <div>Flask</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+    </div>
+    <div class='Software skills-category'>
+        <li>
+            <div>Xcode</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+        <li>
+            <div>Git</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+        <li>
+            <div>Heroku</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+        <li>
+            <div>pgAdmin</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+        <li>
+            <div>Illustrator</div>
+            <div class='skillbar'>
+                <div class='skillbar-filled'></div>
+            </div>
+        </li>
+    </div>
+
+    </ul>
+    </div>
+</div>
+
+</div>
+
+<div class='projects container'>
+    <a name='projects-link'></a>
+    <div class="section-header">
+        Here's some of the projects I've worked on.
+    </div>
+    <div class='starPath starPath2'>
+        <img class='star' src='resources/star.png'>
+        <img class='star' src='resources/star.png'>
+        <img class='star' src='resources/star.png'>
+        <img class='star' src='resources/star.png'>
+        <img class='star' src='resources/star.png'>
+
+    </div>
+    <div class='project-entry row'>
+        <div class='col-xs-12 col-md-6'>
+            <img class='project-photo' src='resources/biasrankings.png'>
+        </div>
+        <div class='col-xs-12 col-md-6'>
+            <div class='project-description'>
+                <h3>Bias Rankings</h3>
+                <p>A web application I built for Kpop fans to vote for their favorite idols and also view statistics and rankings based on the data  collected. The application is written with Python Flask and PostgreSQL for its database. I also used Chart.js on the front-end to display group statistics.</p>
+                
+                <form target="_blank" action='http://www.biasrankings.com'>
+                    <input class='btn visitbtn' type='submit' value='Visit Website'/>
+                </form>
+            </div>
+        </div>    
+    </div>
+        <div class='starPath starPath3'>
+        <img class='star' src='resources/star.png'>
+        <img class='star' src='resources/star.png'>
+        <img class='star' src='resources/star.png'>
+        <img class='star' src='resources/star.png'>
+        <img class='star' src='resources/star.png'>
+    </div>
+        <div class='project-entry row'>
+        <div class='col-xs-12 col-md-6'>
+            <img class='project-photo smaller-photo' src='resources/ops.jpg'>
+        </div>
+        <div class='col-xs-12 col-md-6'>
+            <div class='project-description'>
+                <h3>OPS Capstone</h3>
+                <p>In addition to studying Computer Science, for the last year I've been a student of the UCLA IEEE Ops program working on basic Electrical Engineering skills like programming microcontrollers and soldering. 
+                    <br><br>
+                    In our capstone project, I worked with my partner to create a simple micro-mouse vehicle much like the one depicted, which used IR sensors to autonomously navigate through a single-path maze, moving in a straight path using a PID algorithm. I was primarily in charge of the software, and used C and the Arduino IDE to program an Arduino Nano on our micro-mouse.</p>
+            </div>
+        </div>    
+    </div>
+</div>
+
+<div class='coursework container'>
+    <a name='coursework-link'></a>
+    <div class="section-header">
+        I'm currently starting my second year at UCLA, but I've already learned a lot through my classes here at UCLA, and even made some cool things.
+    </div>
+    <div class='courses'>
+
+        <table class='course'>
+            <tr class='course-title'> 
+                <td>
+                    <img id='35L' class='arrow' src='resources/arrow.png'>
+                    <div class='starPath starPath35 35L'>
+                    <img class='star hidden-star' src='resources/star.png'>
+                    </div>
+                </td>
+                <td class='course-number'>
+                    <div>CS 35L -</div>
+                </td>
+                <td class='course-name'>Software Construction Labratory (In Progress)</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td colspan='2'>
+                <div class='course-description 35L'>
+                    <div>
+                    Fundamentals of commonly used software tools and environments, particularly open-source tools to be used in upper division computer science courses.
+                    </div>
+                </div>
+                </td>
+            </tr>
+        </table>
+        <table class='course'>
+            <tr class='course-title'> 
+                <td>
+                    <img id='33' class='arrow' src='resources/arrow.png'> 
+                    <div class='starPath starPath33 33'>
+                    <img class='star hidden-star' src='resources/star.png'>
+                    </div>
+                </td>
+                <td class='course-number'>
+                    <div>CS 33 -</div>
+                </td>
+                <td class='course-name'>Introduction to Computer Organization</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td colspan='2'>
+                <div class='course-description 33'>
+                    <div>
+                    Introductory course on computer architecture, assembly language, and operating systems fundamentals. Number systems, machine language, and assembly language. Procedure calls, stacks, interrupts, and traps. Assemblers, linkers, and loaders.
+                    </div>
+                </div>
+                </td>
+            </tr>
+        </table>
+        <table class='course'>
+            <tr class='course-title'> 
+                <td>
+                    <img id='32' class='arrow' src='resources/arrow.png'> 
+                    <div class='starPath starPath32 32'>
+                    <img class='star hidden-star' src='resources/star.png'>
+                    <img class='star hidden-star' src='resources/star.png'>
+                    <img class='star hidden-star' src='resources/star.png'>
+                    <img class='star hidden-star' src='resources/star.png'>
+                    <img class='star hidden-star' src='resources/star.png'>
+                    <img class='star hidden-star' src='resources/star.png'>
+                    <img class='star hidden-star' src='resources/star.png'>
+                    <img class='star hidden-star' src='resources/star.png'>
+                    <img class='star hidden-star' src='resources/star.png'>
+                    <img class='star hidden-star' src='resources/star.png'>
+                    </div>
+                </td>
+                <td class='course-number'>
+                    <div>CS 32 -</div>
+                </td>
+                <td class='course-name'>Introduction to Computer Science II</td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td colspan='2'>
+                <div class='course-description 32'>
+                    <div>
+                        <p>
+                        Object-oriented software development. Abstract data type definition and use. Data structures: stacks, queues, lists. Algorithm analysis. Trees, graphs, and associated algorithms. Searching and sorting. 
+                        </p>
+                        <div class='notable'> Notable Projects </div>
+                        <div class='notable-project'>
+                            <div class='notable-text'>
+                                <img class='notable-icon' src='resources/bruinnav.png'>
+                                <h3>Bruin Nav</h3>
+                                <p>
+                                    I developed a navigation system which shows users the closest route between two locations in the UCLA/Westwood area. Built using Geo-coordinate data from the Open Street Map project database and implemented with binary search trees and the A* algorithm. The project was written with C++.
+                                </p>
+                            </div>
+                        </div>
+                        <div class='notable-project'>
+                            <div class='notable-text'>
+                                <img class='notable-icon' src='resources/bugs.png'>
+                                <h3>Bugs!</h3>
+                                <p>
+                                    I worked on a programming competition platform in the form of the game "Bugs!" which takes players' code in a provided "Bugs!" language and uses it to control the behaviour of a colony of ants in an arena for survival. The game is filled with competing pheromone-emitting ants, vicious growing grasshoppers, obstacles and traps, and food for the ants to collect.  
+                                    <br><br>
+                                    Primary tasks included implementing game elements with object-oriented programming and polymorphism, simulating interactions between objects, and interpreting commands from the "Bugs!" language to simulate ant behaviour in the game environment. The project was written with C++.  
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </td>
+            </tr>
+        </table>
+        <table class='course'>
+            <tr class='course-title'> 
+                <td>
+                    <img id='31' class='arrow' src='resources/arrow.png'> 
+                            <div class='starPath starPath31 31'>
+                                <img class='star hidden-star' src='resources/star.png'>
+                            </div>
+                </td>
+                <td class='course-number'>
+                    <div>CS 31 -</div>
+                </td>
+                <td class='course-name'>Introduction to Computer Science I</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan='2'>
+                <div class='course-description 31'>
+                    <div>
+                    Generic programming with procedural and data abstraction, recursion, pointers, and an introduction to object-oriented programming. Projects in C++.
+                    </div>
+                </div>
+                </td>
+            </tr>
+        </table>
+        
+
+    </div>
+</div>
+<div class='contact container'>
+    <a name='contact-link'></a>
+    <div class='thankyou'>
+        Thank you for playing
+    </div>
+    <div class="contact-me">
+        <div>If you'd like to work with me or collaborate, let me know!</div>
+        <div class="sub-contact-me">
+            Contact me at <div class='email'>lawrencenlee@gmail.com</div>
+        </div>
+        <div class="sub-contact-me">
+            Check out what I'm up to on
+            <div class='contact-links'>
+                <form target='_blank' action='https://github.com/CaratCode'>
+                    <input type='submit' class='contact-link github' value='Github'>
+                </form>
+                <form target='_blank' action='https://github.com/CaratCode'>
+                    <input type='submit' class='contact-link linkedin' value='LinkedIn'>
+                </form>
+                <form target='_blank' action='https://www.instagram.com/lurins_lee/'>
+                    <input type='submit' class='contact-link instagram' value='Instagram'>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <img class='earth' src='resources/earth.png'>
+</div>
+</body>
+</html>

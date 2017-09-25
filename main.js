@@ -428,5 +428,5 @@ $(document).ready(function(){
         $('.astronaut').animate({top:'+=25px'},1000,function(){
             $('.astronaut').animate({top:'-=25px'},1000);
         });
-    },2000);
+    },2100);
 });

@@ -191,6 +191,31 @@ $(document).ready(function(){
         prevWindowWidth=window_width;
     });
     
+    //floating astronaut
+    function astronautFloat(){
+            $('.astronaut').animate({top:'+=25px'},1000,function(){
+                    $('.astronaut').animate({top:'-=25px'},1000);
+            });
+    }
+    function astronautInterval(){
+        astronautFloat();
+        return setInterval(function(){
+                astronautFloat();
+            },2100);
+    }
+    var floatingInterval= astronautInterval();
+    $(window).focus(function() {
+        if (!floatingInterval)
+            floatingInterval = astronautInterval();
+    });
+
+    $(window).blur(function() {
+        $('.astronaut').stop(true);
+        $('.astronaut').css('top','0px');
+        clearInterval(floatingInterval);
+        floatingInterval=0;
+    });
+
 
     /*OPTIONAL GAME CODE*/
     var canvas = document.getElementById("rocket");
@@ -225,7 +250,6 @@ $(document).ready(function(){
         ctx.translate(-50,-50);
         ctx.drawImage(img,12.5,12.5);//draw rotated rocket;
         lastAngle=angle;
-        console.log("new angle detected");
     }
     function OutOfBorder(newX,newY,changeX,changeY){//returns true if new position (newX,newY) is out of bounds
         return ((newX<50 && changeX<0) || (newX>window_width && changeX>0)  || (newY>fullPageHeight() && changeY<0));
@@ -284,7 +308,6 @@ $(document).ready(function(){
         let newX= rocketX+changeX+50;
         let newY = rocketY+changeY+100;
         if(!OutOfBorder(newX,newY,changeX,changeY) && !reachedCursor('#rocket')){
-            //console.log(changeX + "," + changeY);
             $('#rocket').animate({'top':'-=' + changeY, 'left':'+=' + changeX},90);
             $('.starPath').each(function(){
                 var starPath = this;
@@ -294,7 +317,6 @@ $(document).ready(function(){
                         $(this).css('visibility','hidden').removeClass("star");
                         score+=5;
                         divider--;
-                        console.log(divider);
                         if(divider<5)
                             divider=5;
                         var congratulations = $('.score').html().substring(0,15);
@@ -310,7 +332,6 @@ $(document).ready(function(){
             });
         }else{
             $("#rocket").stop(true);
-            console.log("STOP SOTP STOP");
         }
     }
     function pushRocket(window_width){ //pushes rocket so that it doesn't go out of bounds
@@ -419,14 +440,8 @@ $(document).ready(function(){
         var courseName= $(this).attr('id');
         var courseClass= '.' + courseName;
         openCourseDescription(courseClass,500);
-        console.log(courseClass);
         //also reveal hidden stars (only show if star paths are already activated)
         $(courseClass).children('img').slideDown();
     });
     
-    setInterval(function(){
-        $('.astronaut').animate({top:'+=25px'},1000,function(){
-            $('.astronaut').animate({top:'-=25px'},1000);
-        });
-    },2100);
 });

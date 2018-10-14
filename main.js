@@ -4,12 +4,14 @@ $(window).on("load",function(){
 
 
 function getCurrentPage(scrollPos,upperBounds){//return the current page (which is the id of the respective progress-option) ie. #projects for projects page
-        if(scrollPos>=upperBounds[3]){
+        if(scrollPos>=upperBounds[4]){
             return '#contact';
-        }else if(scrollPos>=upperBounds[2]){
+        }else if(scrollPos>=upperBounds[3]){
             return '#coursework';
-        }else if(scrollPos>=upperBounds[1]){
+        }else if(scrollPos>=upperBounds[2]){
             return '#projects';
+        }else if(scrollPos>=upperBounds[1]){
+            return '#experience';
         }else if(scrollPos >= upperBounds[0]){
             return '#skills';
         }else{
@@ -19,7 +21,7 @@ function getCurrentPage(scrollPos,upperBounds){//return the current page (which 
 //toggle between mobile and wide versions of header menu based on screen size
 function headerMenuToggle(){
     var width = parseInt($(window).width());
-    if(width > 890){
+    if(width > 1000){
         $('.header-menu-wide').css('display','table');
         $('.mobile').css('display','none');
     }else{
@@ -63,6 +65,9 @@ function headerMenu(prevScrollPage,currentPage){
             }else if(currentPage=='#projects'){
                 $(".header-menu").css("background-image","url('resources/background3.png')");
                 $('.header-menu-mobile').css("background-image","url('resources/background3.png')");
+            }else if(currentPage=='#experience'){
+                $(".header-menu").css("background-image","url('resources/background3.png')");
+                $('.header-menu-mobile').css("background-image","url('resources/background3.png')");
             }else{ // scrollPos=='#skills'
                 $(".header-menu").css("background-image","url('resources/background2.png')");
                 $('.header-menu-mobile').css("background-image","url('resources/background2.png')");
@@ -80,8 +85,8 @@ function headerMenu(prevScrollPage,currentPage){
 function displaySkills(categoryHolder){
     //a dictionary of skills for each category, key is the name of the category and value is a dictionary with skills and respective proficencies
     var skills = {'Languages':{'C++':'85%','Python':'75%','HTML':'90%','Javascript':'75%','CSS':'75%','PostgreSQL':'50%'},
-              'Frameworks':{'jQuery':'70%','Bootstrap':'50%','Flask':'50%'},
-              'Software':{'Xcode':'90%','Git':'50%','Heroku':'60%','pgAdmin':'80%','Illustrator':'50%'}};
+              'Frameworks':{'React':'80%','Redux':'50%','Node.js':'50%','jQuery':'70%','Bootstrap':'50%','Flask':'50%'},
+              'Software':{'Git':'80%','Heroku':'60%','pgAdmin':'80%','Adobe Illustrator':'50%'}};
     
         var category= categoryHolder.html(); //get the hovered category
         $('.stats-skills-category').css('color','black');//change other options back to black
@@ -114,7 +119,7 @@ function onStatsPage(prevScrollPage,currentScrollPage){
 
 function getSectionBounds(){
     var heights=[]; //array of the heights of each section
-    sectionClassNames=['.home','.intro','.projects','.coursework','.contact'];//class name for each section
+    sectionClassNames=['.home','.intro','.experience','.projects','.coursework','.contact'];//class name for each section
     for(s in sectionClassNames){
         heights.push(parseInt($(sectionClassNames[s]).css('height')));
     }
@@ -131,7 +136,7 @@ function getSectionBounds(){
 
 function fullPageHeight(){
     var totalHeight=0;
-    sectionClassNames=['.home','.intro','.projects','.coursework','.contact'];//class name for each section
+    sectionClassNames=['.home','.intro','.experience','.projects','.coursework','.contact'];//class name for each section
     for(s in sectionClassNames){
         totalHeight+= parseInt($(sectionClassNames[s]).css('height'));
     }

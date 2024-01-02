@@ -1,5 +1,6 @@
 $(window).on("load",function(){
     $('.astronaut').css('display','table');
+    setInterval(blinkStartButton, 500);
 });
 
 
@@ -28,6 +29,10 @@ function headerMenuToggle(){
         $('#menu-open').css('display','block');
         
     }
+}
+
+function blinkStartButton() {
+    $('.start').toggleClass('blinked-state');
 }
 
 //display header menu if current 'page' (section) is not the home page, hide otherwise. Additionally change background img based on current section and highlight the current page
@@ -79,9 +84,9 @@ function headerMenu(prevScrollPage,currentPage){
 //display the skills and animate the skillbar, with the category of skills indicated by the html content of categoryHolder
 function displaySkills(categoryHolder){
     //a dictionary of skills for each category, key is the name of the category and value is a dictionary with skills and respective proficencies
-    var skills = {'Languages':{'C++':'85%','Python':'75%','HTML':'90%','Javascript':'75%','CSS':'75%','PostgreSQL':'50%'},
-              'Frameworks':{'jQuery':'70%','Bootstrap':'50%','Flask':'50%'},
-              'Software':{'Xcode':'90%','Git':'50%','Heroku':'60%','pgAdmin':'80%','Illustrator':'50%'}};
+    var skills = {'Languages':{'C++':'75%', 'Java': '80%','Python':'75%','HTML':'90%','Javascript':'99%','CSS':'99%','MySql':'50%'},
+              'Frameworks':{'React': '99%', 'Jest / React Testing Library': '90%','Redux': '80%', 'jQuery':'70%','Bootstrap':'50%','Flask':'50%'},
+              'Software':{'Git':'90%','IntelliJ':'80%', 'Jira': '80%'}};
     
         var category= categoryHolder.html(); //get the hovered category
         $('.stats-skills-category').css('color','black');//change other options back to black
@@ -329,7 +334,7 @@ $(document).ready(function(){
     }
     
     $('.start').bind('click.gameActivate',function(){
-                //hide stats/skills
+        //hide stats/skills
         $('.stats').css('display','none');
         $('.skills').css('display','none');
         //change text
